@@ -1,0 +1,20 @@
+<DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Главная страница{% endblock %}</title>
+</head>
+<body>
+    <h1>{% block h1 %}Добро пожаловать на платформу обмена навыками!{% endblock %}</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'main' %}">Главная</a></li>
+            <li><a href="{% url 'profiles' %}">Профиль</a></li>
+            <li><a href="{% url 'make_post' %}">Создание поста</a></li>
+            <li><a href="{% url 'check_post' %}">Просмотр постов</a></li>
+    
+        </ul>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
